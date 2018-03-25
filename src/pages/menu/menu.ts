@@ -29,15 +29,23 @@ export class MenuPage {
 
   @ViewChild(Nav) nav: Nav;
 
+
+   // Adding all components which are in the navigation menu
   pages: PageInterface[] = [
     { title: 'Home', pageName: 'TabsPage', tabComponent: 'ServicePage', index: 0, icon: 'home'},
-    { title: 'Contact', pageName: 'TabsPage', tabComponent: 'ContactsPage', index: 1, icon: 'contacts'},
-    { title: 'Special', pageName: 'SpecialPage', icon: 'planet'}
+    { title: 'Contact information', pageName: 'TabsPage', tabComponent: 'ContactsPage', index: 1, icon: 'contacts'},
+    { title: 'About', pageName: 'SpecialPage', index: 2, icon: 'person'},
+    { title: 'Project Work', pageName: 'ProjectworkPage', index: 3, icon: 'folder'},
+    { title: 'Targeted CV', pageName: 'TargetedPage', index: 4, icon: 'clipboard'},
+    { title: 'Curriculum activities', pageName: 'ActivitiesPage', index: 5, icon: 'trophy'}
+
   ]
   
   constructor(public navCtrl: NavController, public navParams: NavParams, private auth: AuthService) {
   }
+ 
 
+  // Rooting the buttons
   openPage(page: PageInterface){
     let params ={};
     
@@ -50,7 +58,7 @@ export class MenuPage {
       this.nav.setRoot(page.pageName, params);
     }
   } 
-
+   // Rooting the button which opens the navigation menu 
   isActive(page: PageInterface){
     let childNav=this.nav.getActiveChildNav();
 
@@ -64,7 +72,7 @@ export class MenuPage {
       return 'primary';
     }
   }
-
+  // Creating the logout feature
   ionViewDidLoad() {
     console.log('ionViewDidLoad MenuPage');
   }

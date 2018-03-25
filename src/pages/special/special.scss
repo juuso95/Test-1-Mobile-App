@@ -1,3 +1,31 @@
+// Adding the blurred backround to the page
+// Adding my personal photo to the page
+
 page-special {
+
+    .getstart {
+ 
+    
+        background-image: url('../../img/111.jpg');
+        height: 650px;
+        width: 400px;
+    // background-image: url(’/img/letsstart.jpg’);
+    // background-image: url(‘img/letsstart.jpg’);
+    // background-image: url(’…/img/letsstart.jpg’);
+    // background-image: url(’./img/letsstart.jpg’);
+    
+    }
+    .logo-row {
+        background-image: url('../../img/juuso4.jpg');
+        height: 190px;
+        width: 150px;
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+    ion-row {
+        align-items: center;
+        text-align: center;
+      }
+  
 
 }

@@ -10,7 +10,7 @@ import {AngularFireAuth} from 'angularfire2/auth';
   selector: 'page-register',
   templateUrl: 'register.html',
 
-
+// Creating registerCredentials which works as a authentication details
 })
 export class RegisterPage {
   createSuccess = false;
@@ -26,13 +26,15 @@ export class RegisterPage {
     }).present();
   }
   
-  
+  // Inserting the data to FireAuth database
+  // When succes, register completed, and root back to login page
   public register() {
     
         this.fire.auth.createUserWithEmailAndPassword(this.registerCredentials.email, this.registerCredentials.password)
       .then (data => {
         console.log('got data', data);
         this.alert('Succes, you succesfully registered!')
+        this.nav.setRoot('LoginPage')
       })
       .catch (error => {
         this.alert(error.message);

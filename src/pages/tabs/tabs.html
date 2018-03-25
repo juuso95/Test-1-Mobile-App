@@ -1,7 +1,16 @@
+<!--
+  Creating the content of tabs
+-->
 
-<ion-tabs [selectedIndex]="myIndex">
+
+<ion-tabs color="dark" [selectedIndex]="myIndex">
+   
   
   <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>
   <ion-tab [root]="tab2Root" tabTitle="Contacts" tabIcon="contacts"></ion-tab>
+  <ion-tab [root]="tab3Root" tabTitle="About" tabIcon="person"></ion-tab>
+  <ion-tab [root]="tab4Root" tabTitle="Projects" tabIcon="folder"></ion-tab>
+  <ion-tab [root]="tab5Root" tabTitle="CV" tabIcon="clipboard"></ion-tab>
+  <ion-tab [root]="tab6Root" tabTitle="Activities" tabIcon="trophy"></ion-tab>
   
 </ion-tabs>

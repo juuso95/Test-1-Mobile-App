@@ -21,7 +21,7 @@ export class AuthService {
 
 
   
-   
+    // Creating the login-system by using authentication details
     public login(credentials) {
       if (credentials.email === null || credentials.password === null) {
         return Observable.throw("Please insert credentials");
@@ -35,7 +35,7 @@ export class AuthService {
         });
       }
     }
-   
+   // Creating the register-system by using authentication details
     public register(credentials) {
       if (credentials.email === null || credentials.password === null) {
         return Observable.throw("Please insert valid credentials");
@@ -56,7 +56,7 @@ export class AuthService {
   public getUserInfo() : User {
     return this.currentUser;
   }
- 
+  // Creating Logout-system
   public logout() {
     return Observable.create(observer => {
       this.currentUser = null;

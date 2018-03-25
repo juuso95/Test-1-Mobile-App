@@ -4,10 +4,7 @@ import { AuthService } from '../../providers/auth-service/auth-service';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { MenuPage } from '../menu/menu';
 /**
- * Generated class for the LoginPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
+  Connecting the page in AuthService and FireAuth
  */
 
 @IonicPage()
@@ -15,11 +12,13 @@ import { MenuPage } from '../menu/menu';
   selector: 'page-login',
   templateUrl: 'login.html',
 })
+
+// Creating registerCredentials which works as authentication details
 export class LoginPage {
   loading: Loading;
   registerCredentials = { email: '', password: '' };
+  
   //credentials = { email:'', password: ''};
-
  //@ViewChild('email') email;
  //@ViewChild('password') password;
 
@@ -42,8 +41,13 @@ export class LoginPage {
   public login() {
 
     //this.showLoading()
-
     //this.fire.auth.sendPasswordResetEmail()
+
+
+
+    // Fletching the data from FireAuth database
+    // When succes, root has set to home page
+
         this.fire.auth.signInWithEmailAndPassword(this.registerCredentials.email, this.registerCredentials.password)
       .then (data => {
         console.log('got data', data);

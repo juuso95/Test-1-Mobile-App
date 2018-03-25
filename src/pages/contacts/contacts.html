@@ -1,24 +1,27 @@
 <!--
-  Generated template for the ContactsPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
+  Adding a button to the navigation menu and creating the content of the page
+  Also adding couple hyperlinks which directly goes to my social media pages
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="dark">
       <ion-buttons start>
           <button ion-button menuToggle>
             <ion-icon name="menu"></ion-icon>
           </button>
         </ion-buttons>
-    <ion-title>Contact us:</ion-title>
+    <ion-title>Contact informations</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
-<h3>Contact us anytime!</h3>
-{{email}}
+<ion-content padding class="getstart">
+<h3>Contact me anytime!</h3>
+<h6>My student email:</h6> {{email}}
+<h6>My personal email:</h6> juuso.kivisto@outlook.com
+<h6>Phone number:</h6> 0504352906
+<h6><ion-icon name="logo-linkedin"></ion-icon> Linkedin: </h6><p><a href="https://www.linkedin.com/in/juuso-kivist%C3%B6-12042b159/">My Linkedin</a></p> 
+<h6><ion-icon name="logo-facebook"></ion-icon> Facebook: </h6><p><a href="https://www.facebook.com/juuso95">My Facebook </a></p>
+
 </ion-content>

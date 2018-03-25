@@ -1,6 +1,11 @@
+// Adding the blurred backround to the page
+// Adjusting the clolor, size, position of register box and buttons
+
 page-register {
     .login-content {
-      background: #56CA96;
+      background-image: url('../../img/111.jpg');
+        height: 650px;
+        width: 400px;
    
       .login-box {
         background: #509287;
